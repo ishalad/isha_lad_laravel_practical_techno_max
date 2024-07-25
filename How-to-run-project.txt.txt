@@ -1,0 +1,26 @@
+Please refer following steps to run the project
+
+1. git clone : https://github.com/ishalad/isha_lad_laravel_practical_techno_max.git
+
+2. cd isha_lad_laravel_practical_techno_max
+
+3. composer install
+
+4. npm install
+
+5. php artisan migrate 
+
+6. php artisan db:seed --class=AddAdmin
+	php artisan db:seed --class=UserSeeder
+	php artisan db:seed --class=TechnologySeeder
+	php artisan db:seed --class=UpdateUserTechnology
+
+7. php artisan serve
+
+8. Admin panel credentials
+
+	username: admin@mail.com
+	password: admin
+
+9. register new user
+
