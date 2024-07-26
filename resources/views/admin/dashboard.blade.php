@@ -10,7 +10,13 @@
         </div>
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('admin.technology_report')" :active="request()->routeIs('dashboard')">
-                {{ __('Technology Report') }}
+                {{ __('Technology Report ') }}
+            </x-responsive-nav-link>
+        </div>
+
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link :href="route('map_based_report')" :active="request()->routeIs('map_based_report')">
+                {{ __('Map Based Report ') }}
             </x-responsive-nav-link>
         </div>
     </x-slot>
@@ -34,7 +40,11 @@
                     <a href="{{ route('admin.registration_report') }}" class="text-blue-600 hover:underline">Registration Report</a>
                 </li>
                 <li>
-                    <a href="{{ route('admin.technology_report') }}" class="text-blue-600 hover:underline">Technology Report</a>
+                    <a href="{{ route('admin.technology_report') }}" class="text-blue-600 hover:underline">Technology Report fedfesdf</a>
+                </li>
+
+                <li>
+                    <a href="{{ route('map_based_report') }}" class="text-blue-600 hover:underline">Map Based Report</a>
                 </li>
             </ul>
         </div>

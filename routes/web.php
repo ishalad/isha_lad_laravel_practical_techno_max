@@ -21,7 +21,7 @@ Route::get('/dashboard', function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::post('/profile-update', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
@@ -29,6 +29,7 @@ Route::middleware('isAdmin')->group(function () {
     // Route::get('admin/dashboard', [AuthenticatedSessionController::class, 'adminDashboard'])->name('admin.dashboard');
     Route::get('/Client-registration-report', [ReportController::class, 'registrationReport'])->name('admin.registration_report');
     Route::get('/Client-technology-report', [ReportController::class, 'technologyReport'])->name('admin.technology_report');
+    Route::get('gmaps', [ReportController::class,'gmaps'])->name('map_based_report');
 });
 
 require __DIR__.'/auth.php';

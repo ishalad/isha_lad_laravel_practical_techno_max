@@ -26,7 +26,10 @@ class User extends Authenticatable
         'phone',
         'email_verified_at',
         'reference',
-        'technology_ids',
+        'is_admin',
+        'lat',
+        'lon',
+
     ];
 
     /**
@@ -49,6 +52,7 @@ class User extends Authenticatable
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
+            'phone' => 'array',
         ];
     }
 
